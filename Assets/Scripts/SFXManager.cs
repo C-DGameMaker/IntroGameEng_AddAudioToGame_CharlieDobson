@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SFXManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class SFXManager : MonoBehaviour
     private AudioSource SFXaudioSource;
 
     private AudioSource BgMusicAudioSource;
+
+    public float minPitch = 0.8f; 
+    public float maxPitch = 1.2f;
 
     public void Awake()
     {
@@ -31,12 +35,14 @@ public class SFXManager : MonoBehaviour
     //called in the PlayerController Script
     public void PlayerShoot()
     {
+        SFXaudioSource.pitch = Random.Range(minPitch, maxPitch);
         SFXaudioSource.PlayOneShot(playerShoot);
     }
 
     //called in the PlayerController Script
     public void PlayerDamage()
     {
+        
         SFXaudioSource.PlayOneShot(playerDamage);
     }
 

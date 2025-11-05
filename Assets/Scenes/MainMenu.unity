@@ -2943,7 +2943,9 @@ MonoBehaviour:
   playerDamage: {fileID: 8300000, guid: 693348b10a58a8247a5b19dd74189d4e, type: 3}
   playerExplosion: {fileID: 8300000, guid: b232072b245111d4ca9eaf1df73fb17a, type: 3}
   BgMusicGameplay: {fileID: 8300000, guid: 3637e9f0067dce545917d8bd0bdbb13f, type: 3}
-  BgMusicTitleScreen: {fileID: 8300000, guid: 3637e9f0067dce545917d8bd0bdbb13f, type: 3}
+  BgMusicTitleScreen: {fileID: 8300000, guid: 308acc74050644e4c8f945735e50fed5, type: 3}
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!4 &1337980917
 Transform:
   m_ObjectHideFlags: 0
