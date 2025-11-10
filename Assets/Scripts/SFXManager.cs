@@ -9,7 +9,6 @@ public class SFXManager : MonoBehaviour
     public AudioClip asteroidExplosion;
     public AudioClip playerDamage;
     public AudioClip playerExplosion;
-    public AudioClip asteroidExplosion2;
     public AudioClip BgMusicGameplay;
     public AudioClip BgMusicTitleScreen;
 
@@ -19,11 +18,7 @@ public class SFXManager : MonoBehaviour
 
     public float minPitch = 0.8f; 
     public float maxPitch = 1.2f;
-    public float tempoMultiplier = 1.05f;
-
-
-
-    private AsteroidSpawner asteroidSpawner;
+    
     
 
     public void Awake()
@@ -32,7 +27,7 @@ public class SFXManager : MonoBehaviour
         //GameObject child = this.transform.Find("BgMusic").gameObject;
         BgMusicAudioSource = gameObject.transform.Find("BgMusic").gameObject.GetComponent<AudioSource>();
 
-        asteroidSpawner = GetComponent<AsteroidSpawner>();
+       
         
 
 
@@ -82,14 +77,8 @@ public class SFXManager : MonoBehaviour
         BgMusicAudioSource.GetComponent<AudioSource>().clip = BgMusicGameplay;
         BgMusicAudioSource.Play();
 
-        if(asteroidSpawner.waveCount != 0)
-        {
-            for(int i = 0; i < asteroidSpawner.waveCount; i++)
-            {
-                BgMusicAudioSource.pitch = tempoMultiplier;
-                tempoMultiplier += 0.5f;
-            }
-        }
+
+        
 
     }
 }
